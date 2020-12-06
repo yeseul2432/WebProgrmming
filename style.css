@@ -233,7 +233,7 @@ input[id="menuicon"]:checked + label + div {height:100px;}
     display: block;}
 
 .disqus{
-    padding:20px 20px 20px 20px;
+    margin-left:50px;
 }
 
 /*footer*/
