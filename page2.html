@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine not?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="wine.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+  <div class="wrap">
+      <header>
+        <ul class="header-list">
+            <li><a href="index.html"><div>Wine not?</div></a></li>
+
+            <!-- section.sidebar  -->
+            <li>
+                <div>
+                    <ul class="menu-ul">
+                        <li><a href="page1.html">와인의 종류</a></li>
+                        <li><a href="page2.html">와인추천</a></li>
+                        <li><a href="page3.html">와인잔</a></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <input type="checkbox" id="menuicon">
+                    <label for="menuicon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="sidebar">
+                        <ul class="sitemap-ul">
+                            <li><a href="#"></a>
+                                <ul>
+                                    <li><a href="page1.html">첫번째 글</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"></a>
+                                <ul>
+                                    <li><a href="page2.html">첫번째 글</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"></a>
+                                <ul>
+                                    <li><a href="page3.html">첫번째 글</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>			
+                </div>
+            </li>
+        </ul>
+      </header> 
+    
+    
+   <!-- section.title  -->
+    <section class="title2">
+        <div class="inner">
+            <div class="mainTitle">
+                <h3>와인에 가격은 중요하지않아요</h3>
+                <a href="javascript:scroll(700, 700)" class="goDown"><p>더보기</p> </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section.content  -->
+
+    <section class="lowP">
+        <h2>가벼운 지갑을 위한 와인</h2>
+        <hr>
+        <p class="img"><img src="img/wine1.png"></p>
+        <p><span>디아블로 카베르네 소비뇽
+            DIABLO CABERNET SAUVIGNON</span><br><br>
+            생산지 : 센트럴 밸리<br>
+            제조사 : 콘차 이 토로<br>
+            알코올도수 : 13.5%<br>
+            포도품종 : 카베르네 소비뇽 (Cabernet Sauvignon) 100%<br>
+            가격 : 12,900원
+        </p>
+    </section>
+    <section class="mediumP">
+        <h2>신경써서 고른 티 나는 와인</h2>
+        <hr>
+        <p class="img"><img src="img/wine2.png"></p>
+        <p><span>캔달 잭슨 빈트너스 리저브 카베르네 소비뇽
+            KENDALL JACKSON VINTNER'S RESERVE CABERNET SAUVIGNON</span><br><br>
+            
+             생산지 : 캘리포니아<br>
+             제조사 : 잭슨 패밀리 와인<br>
+             알코올도수 : 13.5%<br>
+             포도품종 : 까베르네 소비뇽(Carbernet Sauvignon)92%, 까베르네 프랑(Cabernet Franc)4%쁘띠 베르도(Petit Verdot) 3%, 메를로(Merlot) 1%<br>
+             가격 : 45,000원
+            </p>
+             
+        
+    </section>
+    <section class="highP">
+        <h2>기념할만한 날에 마시는 와인</h2>
+        <hr>
+        <p class="img"><img src="img/wine3.png"></p>
+        <p><span>파토리아 르 푸필레 사프레디
+            FATTORIA LE PUPILLE SAFFREDI</span><br><br>
+            생산지 : 토스카나, 마렘마<br>
+            제조사 : Fattoria Le Pipille (파토리아 르 푸필레)<br>
+            알코올도수 : 14.5%<br>
+            포도품종 : Cabernet Sauvignon (카베르네소비뇽) 60%, Merlot (메를로) 30%, Petit Verdot (프티 베르도) 10%<br>
+            가격 : 270,000원
+        </p>
+            
+        
+    </section>
+
+    <!-- section.cal  -->
+
+    <scetion class="cal">
+        <h2>원하는 와인을 선택하세요</h2>
+        <hr>
+        <input type="checkbox" name="wine1" value="12900" onclick="calc(this)">디아블로 카베르네 소비뇽
+        <input type="checkbox" name="wine2" value="45000" onclick="calc(this)">캔달 잭슨 빈트너스 리저브 카베르네 소비뇽
+        <input type="checkbox" name="wine3" value="270000" onclick="calc(this)">파토리아 르 푸필레 사프레디<br>
+        &nbsp; 총금액 <input type="text" id="sumtext" value="0" > 
+        <input type="button" class="print" value="프린트"
+        onclick="window.print()">
+    </scetion>
+
+    <!-- section.disqus  -->
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://project-ucxaqgcarm.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+           <!-- section.top  -->
+          <a class="top" href="javascript:scroll(0,0)"><p>Top</p> </a>
+
+          <!-- section.footer  -->
+          <footer>
+              <div class="adress">
+                 <p class="fname"> 
+                    충남대학교 불어불문학과 201600254 신예슬<br>
+                    웹페이지 제작 프로젝트
+                 </p>
+                 <p class="flogo"><a href="index.html">Wine not?</a></p>
+              </div>
+          </footer>
+  
+
+  </div> 
+</body>
+</html>

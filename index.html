@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine not?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="wine.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+  <div class="wrap">
+      <header>
+        <ul class="header-list">
+            <li><div class="mainLogo">Wine not?</div></li>
+            <li>
+                <input class="mainBtn" type="button" value="Day" name="white" onclick="modeChD(this.name)">
+                <input class="mainBtn" type="button" value="Night" name="#50021c" onclick="modeChN(this.name)">
+                
+                </li>
+        </ul>
+      </header> 
+
+   <!-- section.main  -->
+    <section class="main">
+        <div class="inner">
+            <div class="mainTitle">
+                <h2>와인을 좋아하세요?</h2>
+                <a href="javascript:scroll(900, 900)" class="btnYes">O</a>
+                <a href="#" class="btnNo" onclick="mainAlert()">X</a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- section.happy  --> 
+   <section class="happy">
+       <h2 id="text"><span class="colortext" >와인</span>의 세계에 빠져보세요!</h2>
+       <ul>
+           <li>
+               <a href="page1.html">
+                   <p>와인종류</p>
+                   <h3>다 같은 와인이 아니에요</h3>
+                   <p class="img"><img src="img/img05.jpg" ></p>
+               </a>
+           </li>
+           <li>
+               <a href="page2.html">
+                   <p>와인 추천</p>
+                   <h3>가격대별로 와인 추천해드려요</h3>
+                   <p class="img"><img src="img/img222.jpg" alt="img5"></p>
+               </a>
+           </li>
+           <li>
+               <a href="page3.html">
+                   <p>와인잔</p>
+                   <h3>와인잔 모으는게 취미예요</h3>
+                   <p class="img"><img src="img/img177.jpg" alt="img5"></p>
+               </a>
+           </li>
+       </ul>
+   </section> 
+
+   <!-- section.random  -->
+
+   <section class="random">
+       <h2 id="which">어떤 것부터 읽어야할지 모르시겠다구요?</h2>
+       <input type="button" value="랜덤으로 이동하기" onclick="load()">
+   </section>
+
+
+   <!-- section.disqus  -->
+
+   <div id="disqus_thread"></div>
+    <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://project-ucxaqgcarm.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    <!-- section.top  -->
+      <a class="top" href="javascript:scroll(0,0)"><p>Top</p> </a>
+
+
+    <!-- section.footer  -->
+      <footer>
+          <div class="adress">
+             <p class="fname"> 
+                충남대학교 불어불문학과 201600254 신예슬<br>
+                웹페이지 제작 프로젝트
+             </p>
+             <p class="flogo"><a href="index.html">Wine not?</a></p>
+          </div>
+      </footer>
+       
+     
+  </div> 
+</body>
+</html>

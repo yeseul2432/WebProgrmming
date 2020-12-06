@@ -1,0 +1,320 @@
+/* 인코딩할때 한국어 깨짐방지 */
+@charset "utf-8";
+/* 구글폰트사용 */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Poor+Story&display=swap');
+/*reset 웹페이지 기본속성 제거*/
+* {margin: 0; padding: 0; }
+li{list-style: none;}
+a {color: inherit; text-decoration: none;} /* 텍스트컬러 부모속성 받기 */
+
+/*layout*/
+body {font-family: 'Nanum Gothic',sans-serif; font-size: 16px; color: #333; line-height: 1.25;}
+header {width: 100%; height: 90px; background: #fff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);position: relative;}
+.header-list {width:1200px;margin:0 auto;font-size:0;padding:20px 40px 0 40px; position: relative;}
+.header-list > li {font-size:12px;display:inline-block;vertical-align:middle;}
+.header-list > li:nth-child(1) {font-size:20px;width:200px;}
+.header-list > li:nth-child(2) {width:calc(100% - 250px);}
+.header-list > li:nth-child(3) {width:50px;}
+.header-list > li > div {width:auto; font-weight: bold; } 
+.header-list > li > input{ border-radius: 50%; display: block; padding: 5px 5px; margin-right: 5px; margin-top: 10px; width: 63px;
+    height: 35px;  font-family: 'Roboto', sans-serif; font-size: 11px;  text-transform: uppercase; letter-spacing: 2.5px; font-weight: 500; border-radius: 45px; transition: all 0.3s ease 0s;  cursor: pointer; outline: none; border: none; }
+.header-list > li .mainBtn:nth-child(1){float: right; color: black; background-color: rgb(255, 255, 97); }
+.header-list > li .mainBtn:nth-child(2){float: right; color: rgb(255, 255, 255); background-color: rgb(24, 24, 24); }
+
+.header-list > li > .mainLogo{margin-top: 10px; font-size: 30px;}
+.header-list li a div{width:auto; font-weight: bold; font-size: 30px;}
+
+/* sidebar */
+.menu-ul {font-size:0;}
+.menu-ul > li {font-size:12px;display:inline-block;vertical-align:middle;margin-left: 140px;}
+.menu-ul > li > a {display:block;width:auto;padding:15px;}
+
+input[id="menuicon"] {display:none;}
+input[id="menuicon"] + label {display:block;position:relative;width:100%;height:40px;cursor:pointer;}
+input[id="menuicon"] + label span {display:block;position:absolute;width:100%;height:3px;border-radius:30px;background:rgb(91, 53, 100);transition:all .35s;}
+input[id="menuicon"] + label span:nth-child(1) {top:10%;}
+input[id="menuicon"] + label span:nth-child(2) {top:50%;transform:translateY(-50%);} 
+input[id="menuicon"] + label span:nth-child(3) {bottom:10%;}
+input[id="menuicon"]:checked + label {z-index:2;}
+input[id="menuicon"]:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(45deg);}
+input[id="menuicon"]:checked + label span:nth-child(2) {opacity:0;}
+input[id="menuicon"]:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(-45deg);}
+div[class="sidebar"] {width:100%;height:0px;background:rgb(215, 196, 219);position:fixed;top:76px;left:0;z-index:1;transition:all .35s;overflow:hidden;}
+input[id="menuicon"]:checked + label + div {height:100px;}
+
+.sitemap-ul {font-size:0;width:1200px;margin:15px auto;text-align:center;}
+.sitemap-ul > li {font-size:12px;display:inline-block;vertical-align:top;width:20%;}
+
+
+/*main*/
+.main {width: 100%; height: auto; background-image: url(img/img03.jpg); background-size: cover; background-position:center; background-repeat: no-repeat; position: relative;}
+.main .inner {width: 900px; height: 800px;margin: 0 auto;  position: relative;}
+.main .inner .mainTitle {width: 653px; height: auto; }
+.main .inner .mainTitle h2{ position: absolute; top: 35%; left: 50%; transform: translateX(-50%); font-size: 50px; line-height: 1.3; color: #222; animation-name: titani;  animation-duration: 1s;}
+@keyframes titani {
+    0%{opacity: 0; top:0;}
+    30%{opacity: 0; top:0;}
+    100%{opacity: 1; top:35%;}
+}
+
+.main .inner .mainTitle .btnYes {position: absolute; border-radius: 50%; left: 42%; transform: translateX(-50%); top:55%; display: inline-block; padding: 15px 25px; font-size: 18px; color: #fff; background: #000; animation-name: titani-btn; animation-duration: 2s;}
+.main .inner .mainTitle .btnYes:hover {
+    background-color: #68072c;
+}
+
+.main .inner .mainTitle .btnNo {position: absolute; border-radius:50%; left: 58%; transform: translateX(-50%); top:55%; display: inline-block; padding: 15px 25px; font-size: 18px; color: #fff; background: #000; animation-name: titani-btn; animation-duration: 2s;}
+.main .inner .mainTitle .btnNo:hover {
+    background-color: #68072c;
+}
+
+@keyframes titani-btn {
+    0%{opacity: 0;  top: 70%;}
+    30%{opacity: 0; top: 70%;}
+    100%{opacity: 1; top:55%; }
+}
+
+
+
+/*happy*/
+.happy {width: 1400px; margin: 0 auto; color: #333; margin-top: 100px;}
+.happy h2{ text-align:center;font-size: 40px; font-weight: bold; margin-bottom: 50px;}
+.happy h2 .colortext { color: #f57260;}
+.happy ul {width: 100%; height: auto; margin: 0 auto;  overflow: hidden;}
+
+/* 자식요소에 float주면 부모요소의 높이값이 상실됨 따라서 부모에 overflow hidden 추가해야함 */
+.happy ul li {float: left; width: 32.2%; margin-right: 1.7%; margin-bottom: 80px; background:  #c99494;}
+.happy ul li:nth-child(2){background: #fff3b1;}
+.happy ul li:nth-child(3){margin-right: 0; background: #864c5b;}
+.happy ul li a {display: block; width: 100%; height: 100%; padding: 50px 15px 50px 15px;  box-sizing: border-box; position: relative; overflow: hidden; text-align: center;}
+.happy ul li p {font-size: 19px; margin-bottom: 30px; font-weight: bold;}
+.happy ul li h3 {font-size: 30px; margin-bottom: 70px;}
+.happy ul li p.img {height: 250px; ;  overflow: hidden;}
+.happy ul li p.img img {width: 100%;  transition: all 0.3s;}
+/* 확대모션 */
+.happy ul li a:hover .img img {
+    transform: scale(1.2); transition: all 1s;
+}
+
+
+
+/* title */
+.title1 {width: 100%; height: 600px; background-image: url(img/img122.jpg); background-size: cover; background-position:center; background-repeat: no-repeat; position: relative;}
+.title1 .inner {width: 900px; height: 800px;margin: 0 auto;  position: relative;}
+.title1 .inner .mainTitle {width: 653px; height: auto; }
+.title1 .inner .mainTitle h2{ position: absolute; top: 35%; left: 50%; transform: translateX(-50%); font-size: 40px; line-height: 1.3; color: rgb(255, 255, 255);text-shadow: 1px 1px 10px #000;}
+.title1 .inner .mainTitle h3{ position: absolute; top: 35%; left: 50%; transform: translateX(-50%); font-size: 35px; line-height: 1.3; color: #222;}
+.title1 .inner .mainTitle a{display: block; width:100%; height: 100%; }
+.title1 .inner .mainTitle p{ font-size: 16px; font-weight: bold; color: #fff; position:absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+
+.title2 {width: 100%; height: 600px; background-image: url(img/img09.jpg); background-size: cover; background-position:center; background-repeat: no-repeat; position: relative;}
+.title2 .inner {width: 900px; height: 800px;margin: 0 auto;  position: relative;}
+.title2 .inner .mainTitle {width: 653px; height: auto; }
+.title2 .inner .mainTitle h3{ position: absolute; top: 35%; left: 50%; transform: translateX(-50%); font-size: 35px; line-height: 1.3; color: rgb(255, 255, 255);text-shadow: 1px 1px 10px #000;}
+.title2 .inner .mainTitle a{display: block; width:100%; height: 100%; }
+.title2 .inner .mainTitle p{ font-size: 16px; font-weight: bold; color: #fff; position:absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+
+.title3 {width: 100%; height: 600px; background-image: url(img/img24.jpg); background-size: cover; background-position:center; background-repeat: no-repeat; position: relative;}
+.title3 .inner {width: 900px; height: 800px;margin: 0 auto;  position: relative;}
+.title3 .inner .mainTitle {width: 653px; height: auto; }
+.title3 .inner .mainTitle h3{ position: absolute; top: 35%; left: 50%; transform: translateX(-50%); font-size: 35px; line-height: 1.3; color: rgb(255, 255, 255);text-shadow: 1px 1px 10px #000;}
+.title3 .inner .mainTitle a{display: block; width:100%; height: 100%; }
+.title3 .inner .mainTitle p{ font-size: 16px; font-weight: bold; color: #fff; position:absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+
+
+/* type */
+.type{ display: block; padding: 50px 50px; font-family: 'Do Hyeon', sans-serif; color: rgb(34, 0, 34);background-color: rgb(230, 195, 235);
+    background-image: radial-gradient(closest-side, transparent 98%, rgb(169, 119, 173) 100%), radial-gradient(closest-side, transparent 98%, rgb(169, 119, 173) 100%);
+    background-position: 0 0, 15px 15px;
+    background-size: 30px 30px;}
+.type h2{margin-bottom: 20px; margin-top: 30px; background-color: white; padding: 20px 20px; font-size: 30px;}
+.type hr{background-color: rgb(93, 16, 148); height: 2px; border: none;}
+.type p{display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; background-color: white; padding: 20px 20px}
+.type .img{background: none;}
+
+
+
+.lowP{ display: block; padding: 50px 50px; background-color: rgb(255, 248, 228); } 
+.lowP h2{margin-bottom: 20px; margin-top: 30px;}
+.lowP p{display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; font-family: 'Poor Story', cursive;font-size: 20px;}
+.lowP p span{
+    font-weight: bold; font-size: 20px;
+}
+.mediumP{ display: block; padding: 50px 50px; background-color: rgb(252, 255, 215);}
+.mediumP h2{margin-bottom: 20px; margin-top: 30px; }
+.mediumP p{display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; font-family: 'Poor Story', cursive; font-size: 20px;}
+.mediumP p span{
+    font-weight: bold; font-size: 20px;
+}
+.highP{ display: block; padding: 50px 50px; background-color: rgb(250, 244, 255);}
+.highP h2{margin-bottom: 20px; margin-top: 30px;}
+.highP p{display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; font-family: 'Poor Story', cursive;font-size: 20px;}
+.highP p span{
+    font-weight: bold; font-size: 20px;
+}
+
+
+
+/* cal */
+.cal{ display: block; padding: 50px 50px; background-color: rgb(105, 23, 78);color: rgb(255, 255, 255);background: repeating-linear-gradient(45deg,rgb(105, 23, 78), rgb(105, 23, 78) 10px, rgb(146, 79, 124) 0, rgb(146, 79, 124) 20px);}
+.cal h2{margin-bottom: 20px; margin-top: 30px; margin-left: 10px; }
+.cal p{font-weight: bold; margin-top: 10px;}
+.cal input{margin:10px 10px 10px 10px; margin-top: 20px;}
+.cal .print{ border-radius: 50%; display: block; padding: 5px 5px; margin-right: 5px; margin-top: 10px; width: 60px;
+    height: 35px;  font-family: 'Roboto', sans-serif; font-size: 11px;  text-transform: uppercase; letter-spacing: 2.5px; font-weight: 500; border-radius: 45px; transition: all 0.3s ease 0s;  cursor: pointer; outline: none; border: none; background-color: rgb(255, 217, 159);}
+
+    
+
+/* glass */
+.glass{ display: block; padding: 50px 50px; background-color: rgb(255, 252, 245); text-align: center; } 
+.glass h2{margin-bottom: 20px; margin-top: 30px;}
+.glass p{display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;} 
+.glass .img{cursor:pointer;}
+
+
+
+/* rondom */
+.random{ text-align:center; display: block; padding: 50px 50px; }
+.random h2{font-size: 30px; font-weight: bold; margin-bottom: 50px;margin-top:30px;}
+.random input {
+    width: 170px;
+    height: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+.random input:hover {
+    background-color: #ffee8b;
+    box-shadow: 0px 15px 20px#e0dcc6;
+    color: rgb(71, 15, 29);
+    transform: translateY(-7px);
+}
+
+
+
+/* draw */
+.draw{ display: block; padding: 50px 50px; background: rgb(255, 223, 223);
+    background-image: radial-gradient(rgb(243, 182, 195) 20%, transparent 0), radial-gradient(rgb(243, 182, 195) 20%, transparent 0);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;}
+.draw h2{margin-bottom: 20px; margin-top: 30px; text-align: center; color: rgb(43, 43, 43); font-weight: bold;}
+.draw canvas{ margin: 10px 10px;  margin-left: auto;
+    margin-right: auto;
+    display: block;}
+
+
+/*footer*/
+footer {width: 100%; height: 130px; background: #685062; color: #dbd3d3; overflow: hidden; }
+footer .adress{width: 1400px; margin: 0 auto; line-height: 1.7; margin-top: 7px;}
+footer .adress .fname {float: left; margin: 35px; text-align:center; font-size: 15px; font-family: 'Jua', sans-serif; margin-left: 200px;}
+footer .adress .flogo {float: right; font-size: 30px; margin-top: 35px; margin-right: 250px;}
+
+
+/* top */
+.top {float: right; margin-right: 30px; margin-bottom: 30px; width: 80px; height: 80px; background: #454545; border-radius: 50%; background-image: url(
+    img/arrow.JPG); background-repeat: no-repeat; background-size: 25px; background-position: top; position: relative;} 
+.top a{display: block; width:100%; height: 100%; }
+.top p{ font-size: 16px; font-weight: bold; color: #fff; position:absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

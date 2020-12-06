@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine not?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="wine.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body onload="init()"> 
+  <div class="wrap">
+      <header>
+        <ul class="header-list">
+            <li><a href="index.html"><div>Wine not?</div></a></li>
+
+            <!-- section.sidebar  -->
+            <li>
+                <div>
+                    <ul class="menu-ul">
+                        <li><a href="page1.html">와인의 종류</a></li>
+                        <li><a href="page2.html">와인추천</a></li>
+                        <li><a href="page3.html">와인잔</a></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <input type="checkbox" id="menuicon">
+                    <label for="menuicon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="sidebar">
+                        <ul class="sitemap-ul">
+                            <li><a href="#"></a>
+                                <ul>
+                                    <li><a href="page1.html">첫번째 글</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"></a>
+                                <ul>
+                                    <li><a href="page2.html">첫번째 글</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"></a>
+                                <ul>
+                                    <li><a href="page3.html">첫번째 글</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>			
+                </div>
+            </li>
+        </ul>
+      </header> 
+    
+   <!-- section.title  -->
+    <section class="title3">
+        <div class="inner">
+            <div class="mainTitle">
+                <h3>와인보다 값진 와인잔</h3>
+                <a href="javascript:scroll(700, 700)" class="goDown"><p>더보기</p> </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- section.content  -->
+    <section class="glass">
+        <h2>와인잔 구경하기</h2>
+        <hr>
+        <p>사진을 클릭해보세요!</p>
+        <p class="img"><img src="img/img18.jpg" onclick="change(this)"></p>
+    </section>
+
+    <section class="draw">
+        <h2>마우스로 와인잔을 그려 보세요</h2>
+        <canvas id="myCanvas" style="background-color:rgb(219, 174, 205)" width="600" height="400">
+        </canvas>
+    </section>
+
+    <!-- section.disqus  -->
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://project-ucxaqgcarm.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+           <!-- section.top  -->
+          <a class="top" href="javascript:scroll(0,0)"><p>Top</p> </a>
+          
+
+          <!-- section.footer  -->
+          <footer>
+              <div class="adress">
+                 <p class="fname"> 
+                    충남대학교 불어불문학과 201600254 신예슬<br>
+                    웹페이지 제작 프로젝트
+                 </p>
+                 <p class="flogo"><a href="index.html">Wine not?</a></p>
+              </div>
+          </footer>
+     
+              
+                    
+                          
+                                
+                                      
+                                            
+                                                  
+                                                        
+                                                              
+                                                                    
+                                                                          
+                                                                                
+                                                                                            
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+          
+     
+  </div> 
+</body>
+</html>
