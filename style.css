@@ -232,6 +232,9 @@ input[id="menuicon"]:checked + label + div {height:100px;}
     margin-right: auto;
     display: block;}
 
+.disqus{
+    margin: 20px;
+}
 
 /*footer*/
 footer {width: 100%; height: 130px; background: #685062; color: #dbd3d3; overflow: hidden; }
